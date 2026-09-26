@@ -1,0 +1,19 @@
+{
+  "name": "student-management-rest-api",
+  "version": "1.0.0",
+  "description": "A beginner-friendly Student Management REST API for Web Dev III Lab Assignment 2",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": ["nodejs", "express", "rest-api", "student-management"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

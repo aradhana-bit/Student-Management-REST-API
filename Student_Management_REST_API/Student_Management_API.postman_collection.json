@@ -1,0 +1,78 @@
+{
+  "info": {
+    "_postman_id": "b5a7d887-b1c2-4a35-9b1c-8b7df3c0d5d4",
+    "name": "Student Management REST API",
+    "description": "CRUD requests for the Web Dev III Student Management REST API assignment.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "studentId",
+      "value": "1"
+    }
+  ],
+  "item": [
+    {
+      "name": "Get all students",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/students"
+      }
+    },
+    {
+      "name": "Get student by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/students/{{studentId}}"
+      }
+    },
+    {
+      "name": "Create student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Kabir Joshi\",\n  \"age\": 20,\n  \"course\": \"Web Development\",\n  \"email\": \"kabir.joshi@example.com\"\n}"
+        },
+        "url": "{{baseUrl}}/students"
+      }
+    },
+    {
+      "name": "Update student",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"course\": \"Advanced Web Development\",\n  \"age\": 21\n}"
+        },
+        "url": "{{baseUrl}}/students/{{studentId}}"
+      }
+    },
+    {
+      "name": "Delete student",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/students/{{studentId}}"
+      }
+    }
+  ]
+}
